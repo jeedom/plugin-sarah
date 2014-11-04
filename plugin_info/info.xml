@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>sarah</id>
+    <name>Sarah</name>
+    <description>Plugin pour utiliser Sarah (http://encausse.wordpress.com/s-a-r-a-h/)</description>
+    <icon>fa fa-volume-up</icon>
+    <licence>AGPL</licence>
+    <author>Loïc Gevrey</author>
+    <installation>Aucune</installation>
+    <require>1.10</require>
+    <version>1.0</version>
+    <category>communication</category>
+</info>
+

@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "jeedom"  : {
+      "description": "Plugin pour commander jeedom",
+      "version": "1.0",
+      "addrJeedom"    : "http://[FIXME]:[FIXME]",
+      "apikeyJeedom"  : "[FIXME]"
+    }
+  }
+}
