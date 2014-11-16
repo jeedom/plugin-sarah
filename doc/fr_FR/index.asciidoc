@@ -1,0 +1,10 @@
+== S.A.R.A.H
+
+=== Description
+Plugin permetant à Jeedom de communiquer avec l'application S.A.R.A.H (reconnaissance vocale)
+
+=== Configuration
+include::configuration.asciidoc[]
+
+=== Changelog
+include::changelog.asciidoc[]
