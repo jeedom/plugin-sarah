@@ -1,1 +1,19 @@
-TODO
+Le plugin S.A.R.A.H ajoute la reconnaissance vocale ainsi que la capacité à parler à Jeedom.
+
+Il faut tout d’abord installer S.A.R.A.H sur le poste client (compatible Windows uniquement) : http://encausse.wordpress.com/s-a-r-a-h/
+
+Ensuite il faut ajouter le plugin Jeedom à S.A.R.A.H :
+
+- Il faut télécharger ce fichier puis recuperer les fichier dans ressources et les copier dans plugins/jeedom du repertoire d’installation de S.A.R.A.H
+- Ensuite sur l’interface de S.A.R.A.H (IP du serveur S.A.R.A.H:8080/home) configurer le plugin en lui donnant simplement l’adresse de jeedom ainsi que la clef API
+ 
+
+Tout le reste se passe maintenant sur l’interface de Jeedom.
+
+Il faut lui donner l’adresse du serveur nodeJS de S.A.R.A.H ainsi que du client puis cliquer sur synchroniser (pour rappel cela synchronisera S.A.R.A.H avec les interactions de Jeedom). Jeedom synchronisera S.A.R.A.H à chaque fois que cela sera nécessaire et de manière automatique par la suite (si le client S.A.R.A.H est démarré sinon il faudra le faire manuellement).
+
+Chaque équipement de type S.A.R.A.H crée aussi une commande “dit” qui permet dans les scénarios de faire dire un texte à Jeedom.
+
+Chez moi ça me permet de connaître toutes les remontées d’informations des différents capteurs (type “Sarah combien fait-il dehors?” ou “Sarah qu’elle est la température de la chambre”) mais aussi de piloter les lumières (“Sarah allume la lumière du salon”).
+
+Dans les prochaines évolutions prévues il y a le contrôle d’un bandeau de LED (c’est plus compliqué car la couleur voulue n’est pas attendue et doit être interprétée)
