@@ -10,7 +10,7 @@ Ensuite il faut ajouter le plugin Jeedom à S.A.R.A.H :
 
 Tout le reste se passe maintenant sur l’interface de Jeedom.
 
-image::../images/sarah.JPG[]
+image::../images/sarah_screenshot1.JPG[]
 
 Il faut lui donner l’adresse du serveur nodeJS de S.A.R.A.H ainsi que du client puis cliquer sur synchroniser (pour rappel cela synchronisera S.A.R.A.H avec les interactions de Jeedom). Jeedom synchronisera S.A.R.A.H à chaque fois que cela sera nécessaire et de manière automatique par la suite (si le client S.A.R.A.H est démarré sinon il faudra le faire manuellement).
 
