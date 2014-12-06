@@ -2,11 +2,7 @@ Le plugin S.A.R.A.H ajoute la reconnaissance vocale ainsi que la capacité à pa
 
 Il faut tout d’abord installer S.A.R.A.H sur le poste client (compatible Windows uniquement) : http://encausse.wordpress.com/s-a-r-a-h/
 
-Ensuite il faut ajouter le plugin Jeedom à S.A.R.A.H :
-
-- Il faut télécharger ce fichier puis recuperer les fichier dans ressources et les copier dans plugins/jeedom du repertoire d’installation de S.A.R.A.H
-- Ensuite sur l’interface de S.A.R.A.H (IP du serveur S.A.R.A.H:8080/home) configurer le plugin en lui donnant simplement l’adresse de jeedom ainsi que la clef API
- 
+Ensuite il faut ajouter le plugin Jeedom à S.A.R.A.H en recherchant Jeedom sur le store S.A.R.A.H
 
 Tout le reste se passe maintenant sur l’interface de Jeedom.
 
