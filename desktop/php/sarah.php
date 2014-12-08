@@ -3,6 +3,7 @@ if (!isConnect('admin')) {
     throw new Exception('{{401 - Accès non autorisé}}');
 }
 sendVarToJS('eqType', 'sarah');
+$eqLogics = eqLogic::byType('sarah');
 ?>
 
 <div class="row row-overflow">
@@ -12,17 +13,41 @@ sendVarToJS('eqType', 'sarah');
                 <a class="btn btn-default eqLogicAction" style="width : 100%;margin-top : 5px;margin-bottom: 5px;" data-action="add"><i class="fa fa-plus-circle"></i> {{Ajouter une S.A.R.A.H}}</a>
                 <li class="filter" style="margin-bottom: 5px;"><input class="filter form-control input-sm" placeholder="{{Rechercher}}" style="width: 100%"/></li>
                 <?php
-                foreach (eqLogic::byType('sarah') as $eqLogic) {
+                foreach ($eqLogics as $eqLogic) {
                     echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '"><a>' . $eqLogic->getHumanName(true) . '</a></li>';
                 }
                 ?>
             </ul>
         </div>
     </div>
+
+    <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay" style="border-left: solid 1px #EEE; padding-left: 25px;">
+        <legend>{{Mes S.A.R.A.H}}
+        </legend>
+        <?php
+        if (count($eqLogics) == 0) {
+            echo "<br/><br/><br/><center><span style='color:#767676;font-size:1.2em;font-weight: bold;'>{{Vous n'avez pas encore de S.A.R.A.H, cliquez sur Ajouter une S.A.R.A.H pour commencer}}</span></center>";
+        } else {
+            ?>
+            <div class="eqLogicThumbnailContainer">
+                <?php
+                foreach ($eqLogics as $eqLogic) {
+                    echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
+                    echo "<center>";
+                    echo '<img src="plugins/sarah/doc/images/sarah_icon.png" height="105" width="95" />';
+                    echo "</center>";
+                    echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+        <?php } ?>
+    </div>
+
     <div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
         <form class="form-horizontal">
             <fieldset>
-                <legend>{{Générale}}</legend>
+                <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Générale}}</legend>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">{{Nom de l'équipement S.A.R.A.H}}</label>
                     <div class="col-sm-3">
