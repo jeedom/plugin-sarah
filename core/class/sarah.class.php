@@ -136,7 +136,7 @@ class sarahCmd extends cmd {
         }
         $eqLogic_sarah = sarah::byId($this->getEqLogic_id());
         $message = '';
-        if (isset($_options['title'])) {
+        if (isset($_options['title']) && trim($_options['title']) != '') {
             $message = $_options['title'] . '. ';
         }
         $message .= $_options['message'];
