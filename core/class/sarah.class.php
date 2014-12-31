@@ -64,23 +64,6 @@ class sarah extends eqLogic {
         return $xml;
     }
 
-    public static function cronHourly() {
-        $now = date('Y-m-d H:i:s', strtotime('-1 second', strtotime('now')));
-        $lastDatetime = cache::byKey('sarah::lastRetrievalInternalEvent', $now);
-        foreach (internalEvent::getNewInternalEvent('sarah') as $internalEvent) {
-            if (in_array($internalEvent->getEvent(), array('update::interactQuery'))) {
-                foreach (sarah::byType('sarah') as $sarah) {
-                    if ($sarah->getIsEnable() == 1 && $sarah->ping()) {
-                        log::add('sarah', 'info', __('Mise à jour de la grammaire de Sarah', __FILE__));
-                        $sarah->updateSrvSarah();
-                    } else {
-                        cache::save('sarah::lastRetrievalInternalEvent', $lastDatetime, 0);
-                    }
-                }
-            }
-        }
-    }
-
     /*     * *********************Methode d'instance************************* */
 
     public function ping() {
