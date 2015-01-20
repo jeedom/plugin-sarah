@@ -117,14 +117,20 @@ class sarahCmd extends cmd {
         if (!isset($_options['title']) && !isset($_options['message'])) {
             throw new Exception(__("Le titre ou le message ne peuvent être tous les deux vide", __FILE__));
         }
-        $eqLogic_sarah = sarah::byId($this->getEqLogic_id());
+        $eqLogic = sarah::byId($this->getEqLogic_id());
         $message = '';
         if (isset($_options['title']) && trim($_options['title']) != '') {
             $message = $_options['title'] . '. ';
         }
         $message .= $_options['message'];
-        $http = new com_http($eqLogic_sarah->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($message));
-        return $http->exec();
+        $http = new com_http($eqLogic->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($message));
+        try {
+            return $http->exec();
+        } catch (Exception $e) {
+            if($eqLogic->getConfiguration('doNotThrowError',0) == 0){
+                throw $e;
+            }
+        }      
     }
 
 }

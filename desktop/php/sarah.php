@@ -78,13 +78,19 @@ $eqLogics = eqLogic::byType('sarah');
                 <div class="form-group">
                     <label class="col-sm-2 control-label">{{Adresse du nodeJS}}</label>
                     <div class="col-sm-3">
-                        <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="addrSrv" placeholder="xxx.xxx.xxx.xxx:8080"/>
+                        <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="addrSrv" placeholder="xxx.xxx.xxx.xxx:8080"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">{{Adresse du TTS}}</label>
                     <div class="col-sm-3">
-                        <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="addrSrvTts" placeholder="xxx.xxx.xxx.xxx:8888"/>
+                        <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="addrSrvTts" placeholder="xxx.xxx.xxx.xxx:8888"/>
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">{{Ne pas remonter d'erreur si S.A.R.A.H n'est pas la}}</label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="doNotThrowError" />
                     </div>
                 </div>
             </fieldset> 
