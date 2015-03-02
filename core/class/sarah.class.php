@@ -97,10 +97,6 @@ class sarah extends eqLogic {
 		$sarahCmd->save();
 	}
 
-	public function dontRemoveCmd() {
-		return true;
-	}
-
 }
 
 class sarahCmd extends cmd {
@@ -109,6 +105,10 @@ class sarahCmd extends cmd {
 	/*     * ***********************Methode static*************************** */
 
 	/*     * *********************Methode d'instance************************* */
+
+	public function dontRemoveCmd() {
+		return true;
+	}
 
 	public function execute($_options = array()) {
 		if (!isset($_options['title']) && !isset($_options['message'])) {
