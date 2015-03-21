@@ -18,8 +18,8 @@
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 include_file('core', 'authentification', 'php');
 if (!isConnect()) {
-    include_file('desktop', '404', 'php');
-    die();
+	include_file('desktop', '404', 'php');
+	die();
 }
 ?>
 
@@ -30,6 +30,12 @@ if (!isConnect()) {
             <label class="col-lg-4 control-label">{{Nom S.A.R.A.H}}</label>
             <div class="col-lg-4">
                 <input class="configKey form-control" data-l1key="sarahName" placeholder="Sarah"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-4 control-label">{{Télécharger le plugin}}</label>
+            <div class="col-lg-4">
+                <a class="btn btn-default" href="plugins/sarah/resources/sarah.zip"><i class="fa fa-cloud-download"></i> {{Télécharger pour installer dans S.A.R.A.H}}</a>
             </div>
         </div>
     </fieldset>
