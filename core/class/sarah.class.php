@@ -121,6 +121,9 @@ class sarahCmd extends cmd {
 		}
 		$message .= $_options['message'];
 		$http = new com_http($eqLogic->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($message));
+		if ($eqLogic->getConfiguration('doNotThrowError', 0) == 1) {
+			$http->setNoReportError(true);
+		}
 		try {
 			return $http->exec();
 		} catch (Exception $e) {
