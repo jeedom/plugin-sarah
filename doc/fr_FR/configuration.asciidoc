@@ -4,7 +4,7 @@ Le plugin S.A.R.A.H. ajoute la reconnaissance vocale ainsi que la capacité à p
 
 Il faut tout d’abord installer S.A.R.A.H sur le poste client (compatible Windows uniquement) : http://encausse.wordpress.com/s-a-r-a-h/
 
-Puis installez le plugin S.A.R.A.H sur Jeedom et activez-le : 
+Puis installez le plugin S.A.R.A.H sur Jeedom, et activez-le : 
 
 image::../images/sarah1.PNG[]
 
