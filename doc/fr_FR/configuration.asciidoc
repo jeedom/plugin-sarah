@@ -1,17 +1,52 @@
 Le plugin S.A.R.A.H ajoute la reconnaissance vocale ainsi que la capacité à parler à Jeedom.
 
+==== Configuration du plugin
+
 Il faut tout d’abord installer S.A.R.A.H sur le poste client (compatible Windows uniquement) : http://encausse.wordpress.com/s-a-r-a-h/
 
-Ensuite il faut ajouter le plugin Jeedom à S.A.R.A.H en recherchant Jeedom sur le store S.A.R.A.H.
+Puis installer le plugin S.A.R.A.H sur Jeedom puis activez le : 
 
-Tout le reste se passe maintenant sur l’interface de Jeedom.
+image::../images/sarah1.PNG[]
 
-image::../images/sarah_screenshot1.JPG[]
+Vous pouvez à partir de l'interface de configuration recuperer le plugin à mettre dans S.A.R.A.H et configurer le nom de Sarah (par defaut Sarah mais vous pouvez mettre Jarvis ou Jeedom par exemple).
 
-Il faut lui donner l’adresse du serveur nodeJS de S.A.R.A.H ainsi que du client, puis cliquer sur synchroniser (pour rappel cela synchronisera S.A.R.A.H avec les interactions de Jeedom). Jeedom synchronisera S.A.R.A.H à chaque fois que cela sera nécessaire et de manière automatique par la suite (si le client S.A.R.A.H est démarré, si non il faudra le faire manuellement).
+==== Configuration des équipements
+
+La configuration des équipements S.A.R.A.H est accessible à partir du menu plugin : 
+
+image::../images/sarah2.PNG[]
+
+Voilà à quoi ressemble la page du plugin SMS (ici avec déjà 1 équipement) : 
+
+image::../images/sarah3.PNG[]
+
+[icon="../images/plugin/tip.png"]
+[TIP]
+Comme à beaucoup d'endroits sur Jeedom, mettre la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez, à partir de votre profil, le laisser toujours visible).
+
+Une fois que vous cliquez sur l'un d'eux, vous obtenez : 
+
+image::../images/sarah4.PNG[]
+
+Vous retrouvez ici : 
+
+* *Nom de l'équipement S.A.R.A.H* : nom de votre équipement S.A.R.A.H,
+* *Objet parent* : indique l'objet parent auquel appartient l'équipement.
+* *Activer* : permet de rendre votre équipement actif,
+* *Adresse du nodeJS* : IP de sarah + port du node JS (par defaut le port et le 8080)
+* *Adresse du TTS* : IP de sarah + port du serveur TTS (par defaut le port et le 8888)
+* *Ne pas remonter d'erreur si S.A.R.A.H n'est pas la* : A cocher si S.A.R.A.H n'est pas démarrée en permanance
 
 Chaque équipement de type S.A.R.A.H crée aussi une commande “dit” qui permet dans les scénarios de faire dire un texte à Jeedom.
 
-Par exemple : ça me permet de connaître toutes les remontées d’informations des différents capteurs (type “Sarah combien fait-il dehors?” ou “Sarah qu’elle est la température de la chambre”) mais aussi de piloter les lumières (“Sarah allume la lumière du salon”).
+Le bouton synchroniser permet d'envoyer à S.A.R.A.H la liste de toutes les interactions, il faut le faire a chaque mise à jour des interactions 
 
-Dans les prochaines évolutions prévues, il y a le contrôle d’un bandeau de LED (c’est plus compliqué car la couleur voulue n’est pas attendue et doit être interprétée)
+==== Configuration dans S.A.R.A.H
+
+Dans S.A.R.A.H il faut sur la "carte" du plugin Jeedom puis renseigner l'adresse (ne pas oublier le /jeedom si vous devez en mettre un pour vous connecter à Jeedom) et la clef API de Jeedom
+
+==== Cas d'utilisation
+
+Par exemple : ça me permet de connaître toutes les remontées d’informations des différents capteurs (type “Sarah combien fait-il dehors?” ou “Sarah qu’elle est la température de la chambre”) mais aussi de piloter les lumières (“Sarah allume la lumière du salon”), pour cela il faut bien sur avoir configuré les interactions
+
+
