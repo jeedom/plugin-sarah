@@ -69,9 +69,10 @@ foreach (object::all() as $object) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" >{{Activer}}</label>
-                    <div class="col-sm-1">
-                        <input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>
+                    <label class="col-sm-2 control-label" ></label>
+                    <div class="col-sm-10">
+                        <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
+                        <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
                     </div>
                 </div>
 
@@ -90,7 +91,7 @@ foreach (object::all() as $object) {
                   <div class="form-group">
                     <label class="col-sm-2 control-label">{{Ne pas remonter d'erreur si S.A.R.A.H n'est pas la}}</label>
                     <div class="col-sm-3">
-                        <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="doNotThrowError" />
+                        <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-l1key="configuration" data-l2key="doNotThrowError" />
                     </div>
                 </div>
             </fieldset>
