@@ -91,6 +91,7 @@ class sarah extends eqLogic {
 		}
 		$sarahCmd->setName('Dit');
 		$sarahCmd->setLogicalId('speak');
+		$sarahCmd->setDisplay('title_disable', 1);
 		$sarahCmd->setEqLogic_id($this->getId());
 		$sarahCmd->setType('action');
 		$sarahCmd->setSubType('message');
