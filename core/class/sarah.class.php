@@ -32,27 +32,25 @@ class sarah extends eqLogic {
 		$xml .= "<item>" . config::byKey('sarahName', 'sarah', 'Sarah') . "</item>\r\n";
 		$xml .= "<one-of>\r\n";
 		foreach (interactQuery::all() as $interactQuery) {
-			if ($interactQuery->getEnable() == 1) {
-				$query = $interactQuery->getQuery();
-				preg_match_all("/#(.*?)#/", $query, $matches);
-				$matches = $matches[1];
-				if (count($matches) > 0) {
-					$xmlWildcard .= "<rule id=\"ruleJeedom_" . $interactQuery->getId() . "\" scope=\"public\">\r\n";
-					$xmlWildcard .= "<tag>out.action=new Object();</tag>\r\n";
-					foreach ($matches as $match) {
-						$beforeMatch = substr($query, 0, strpos($query, "#" . $match . "#"));
-						$query = substr($query, strpos($query, "#" . $match . "#") + strlen("#" . $match . "#"));
-						$xmlWildcard .= "<item>" . $beforeMatch . "</item>\r\n";
-						$xmlWildcard .= "<ruleref special=\"GARBAGE\" />\r\n";
-					}
-					if (strlen($query) > 0) {
-						$xmlWildcard .= "<item>" . $query . "</item>\r\n";
-					}
-					$xmlWildcard .= "</rule>\r\n";
-					$xml .= "<item><ruleref uri=\"#ruleJeedom_" . $interactQuery->getId() . "\"/><tag>out._attributes.dictation=\"true\";out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
-				} else {
-					$xml .= "<item>" . $interactQuery->getQuery() . "<tag>out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
+			$query = $interactQuery->getQuery();
+			preg_match_all("/#(.*?)#/", $query, $matches);
+			$matches = $matches[1];
+			if (count($matches) > 0) {
+				$xmlWildcard .= "<rule id=\"ruleJeedom_" . $interactQuery->getId() . "\" scope=\"public\">\r\n";
+				$xmlWildcard .= "<tag>out.action=new Object();</tag>\r\n";
+				foreach ($matches as $match) {
+					$beforeMatch = substr($query, 0, strpos($query, "#" . $match . "#"));
+					$query = substr($query, strpos($query, "#" . $match . "#") + strlen("#" . $match . "#"));
+					$xmlWildcard .= "<item>" . $beforeMatch . "</item>\r\n";
+					$xmlWildcard .= "<ruleref special=\"GARBAGE\" />\r\n";
 				}
+				if (strlen($query) > 0) {
+					$xmlWildcard .= "<item>" . $query . "</item>\r\n";
+				}
+				$xmlWildcard .= "</rule>\r\n";
+				$xml .= "<item><ruleref uri=\"#ruleJeedom_" . $interactQuery->getId() . "\"/><tag>out._attributes.dictation=\"true\";out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
+			} else {
+				$xml .= "<item>" . $interactQuery->getQuery() . "<tag>out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
 			}
 		}
 		$xml .= "</one-of>\r\n";
