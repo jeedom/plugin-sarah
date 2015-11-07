@@ -3,7 +3,7 @@
     "jeedom"  : {
       "description": "Plugin pour commander jeedom",
       "version": "1.0",
-      "addrJeedom"    : "http://[FIXME]:[FIXME]",
+      "addrJeedom"    : "http://192.168.0.125:80",
       "apikeyJeedom"  : "[FIXME]"
     }
   }

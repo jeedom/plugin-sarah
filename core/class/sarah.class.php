@@ -35,50 +35,22 @@ class sarah extends eqLogic {
 			$query = $interactQuery->getQuery();
 			preg_match_all("/#(.*?)#/", $query, $matches);
 			$matches = $matches[1];
-			if (count($matches) > 0) {
-				$xmlWildcard .= "<rule id=\"ruleJeedom_" . $interactQuery->getId() . "\" scope=\"public\">\r\n";
-				$xmlWildcard .= "<tag>out.action=new Object();</tag>\r\n";
-				foreach ($matches as $match) {
-					$beforeMatch = substr($query, 0, strpos($query, "#" . $match . "#"));
-					$query = substr($query, strpos($query, "#" . $match . "#") + strlen("#" . $match . "#"));
-					$xmlWildcard .= "<item>" . $beforeMatch . "</item>\r\n";
-					$xmlWildcard .= "<ruleref special=\"GARBAGE\" />\r\n";
-				}
-				if (strlen($query) > 0) {
-					$xmlWildcard .= "<item>" . $query . "</item>\r\n";
-				}
-				$xmlWildcard .= "</rule>\r\n";
-				$xml .= "<item><ruleref uri=\"#ruleJeedom_" . $interactQuery->getId() . "\"/><tag>out._attributes.dictation=\"true\";out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
-			} else {
+			if (count($matches) == 0) {
 				$xml .= "<item>" . $interactQuery->getQuery() . "<tag>out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
 			}
 		}
 		$xml .= "</one-of>\r\n";
 		$xml .= "<tag>out.action._attributes.uri=\"http://127.0.0.1:8080/sarah/jeedom\";</tag>\r\n";
 		$xml .= "</rule>\r\n";
-		$xml .= $xmlWildcard;
 		$xml .= "</grammar>\r\n";
 		return $xml;
 	}
 
 	/*     * *********************Methode d'instance************************* */
 
-	public function ping() {
-		$http = new com_http($this->getConfiguration('addrSrv') . '/sarah/jeedom?method=ping');
-		try {
-			$http->exec(1, 1, false);
-			return true;
-		} catch (Exception $e) {
-			return false;
-		}
-	}
-
 	public function updateSrvSarah() {
 		$http = new com_http($this->getConfiguration('addrSrv') . '/sarah/jeedom?method=update');
 		$return = $http->exec(30);
-		if ($return != 'Mise à jour du xml réussi') {
-			throw new Exception($return);
-		}
 		return true;
 	}
 
@@ -93,6 +65,17 @@ class sarah extends eqLogic {
 		$sarahCmd->setEqLogic_id($this->getId());
 		$sarahCmd->setType('action');
 		$sarahCmd->setSubType('message');
+		$sarahCmd->save();
+
+		$sarahCmd = $this->getCmd(null, 'updateXml');
+		if (!is_object($sarahCmd)) {
+			$sarahCmd = new sarahCmd();
+		}
+		$sarahCmd->setName('Mettre à jour la grammaire');
+		$sarahCmd->setLogicalId('updateXml');
+		$sarahCmd->setEqLogic_id($this->getId());
+		$sarahCmd->setType('action');
+		$sarahCmd->setSubType('other');
 		$sarahCmd->save();
 	}
 
@@ -110,26 +93,22 @@ class sarahCmd extends cmd {
 	}
 
 	public function execute($_options = array()) {
-		if (!isset($_options['title']) && !isset($_options['message'])) {
-			throw new Exception(__("Le titre ou le message ne peuvent être tous les deux vide", __FILE__));
-		}
 		$eqLogic = $this->getEqLogic();
-		$message = '';
-		if (isset($_options['title']) && trim($_options['title']) != '') {
-			$message = $_options['title'] . '. ';
-		}
-		$message .= $_options['message'];
-		$http = new com_http($eqLogic->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($message));
-		if ($eqLogic->getConfiguration('doNotThrowError', 0) == 1) {
-			$http->setNoReportError(true);
-		}
-		try {
-			return $http->exec();
-		} catch (Exception $e) {
-			if ($eqLogic->getConfiguration('doNotThrowError', 0) == 0) {
-				throw $e;
+		if ($this->getLogicalId() == 'speak') {
+			$http = new com_http($eqLogic->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($_options['message']));
+			if ($eqLogic->getConfiguration('doNotThrowError', 0) == 1) {
+				$http->setNoReportError(true);
+			}
+			try {
+				return $http->exec();
+			} catch (Exception $e) {
+				if ($eqLogic->getConfiguration('doNotThrowError', 0) == 0) {
+					throw $e;
+				}
 			}
 		}
+		if ($this->getLogicalId() == 'updateXml') {
+			$eqLogic->updateSrvSarah();
+		}
 	}
-
 }
