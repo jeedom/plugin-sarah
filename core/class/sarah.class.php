@@ -34,7 +34,7 @@ class sarah extends eqLogic {
 		foreach (interactQuery::all() as $interactQuery) {
 			$query = $interactQuery->getQuery();
 			preg_match_all("/#(.*?)#/", $query, $matches);
-			if (count($matches[1]) == 0 && !preg_match("/[[:digit:]]/", $query) && !preg_match("/\+/", $query) && !preg_match("/\(/", $query) && !preg_match("/\)/", $query)) {
+			if (count($matches[1]) == 0 && !preg_match("/[[:digit:]]/", $query) && !preg_match("/\+|\(|\)/", $query)) {
 				$xml .= "<item>" . $interactQuery->getQuery() . "<tag>out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
 			}
 		}
