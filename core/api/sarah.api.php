@@ -20,20 +20,42 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 global $jsonrpc;
 if (!is_object($jsonrpc)) {
-    throw new Exception(__('JSONRPC object not defined', __FILE__), -32699);
+	throw new Exception(__('JSONRPC object not defined', __FILE__), -32699);
 }
 $params = $jsonrpc->getParams();
 if ($jsonrpc->getMethod() == 'updateXml') {
-    log::add('sarah', 'info', 'Appels api pour generation de grammaire');
-    $jsonrpc->makeSuccess(sarah::generateXmlGrammar());
+	log::add('sarah', 'info', 'Appels api pour generation de grammaire');
+	$jsonrpc->makeSuccess(sarah::generateXmlGrammar());
 }
 
 if ($jsonrpc->getMethod() == 'execute') {
-    $interactQuery = interactQuery::byId($params['id']);
-    if (!is_object($interactQuery)) {
-        throw new Exception(__('Aucune correspondance pour l\'id ', __FILE__) . $params['id'] . __('. Veuillez mettre à jour le xml.', __FILE__), -32605);
-    }
-    $jsonrpc->makeSuccess($interactQuery->executeAndReply($params));
+	$interactQuery = interactQuery::byId($params['id']);
+	if (!is_object($interactQuery)) {
+		throw new Exception(__('Aucune correspondance pour l\'id ', __FILE__) . $params['id'] . __('. Veuillez mettre à jour le xml.', __FILE__), -32605);
+	}
+	$jsonrpc->makeSuccess($interactQuery->executeAndReply($params));
+}
+
+if ($jsonrpc->getMethod() == 'askResult') {
+	$sarah = sarah::byId($params['id']);
+	if (!is_object($sarah)) {
+		throw new Exception(__('Aucune correspondance pour l\'id sarah : ', __FILE__) . $params['id'], -32605);
+	}
+	$cmd = $sarah->getCmd('action', 'speak');
+	if (!is_object($cmd)) {
+		throw new Exception(__('Commande speak de sarah non trouvée', __FILE__), -32605);
+	}
+	if ($cmd->getConfiguration('storeVariable', 'none') != 'none') {
+		$dataStore = new dataStore();
+		$dataStore->setType('scenario');
+		$dataStore->setKey($cmd->getConfiguration('storeVariable', 'none'));
+		$dataStore->setValue($params['response']);
+		$dataStore->setLink_id(-1);
+		$dataStore->save();
+		$cmd->setConfiguration('storeVariable', 'none');
+		$cmd->save();
+	}
+	$jsonrpc->makeSuccess();
 }
 
 throw new Exception(__('Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod(), __FILE__));

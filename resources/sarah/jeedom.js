@@ -15,7 +15,7 @@
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
 
-exports.action = function (data, callback, config, SARAH) {
+exports.action = function (data, callback) {
     var debug = false;
 
     /************************************************************************************************
@@ -54,7 +54,7 @@ exports.action = function (data, callback, config, SARAH) {
      ** @function execute
      ***************************************************/
     jeedomProcess.on('execute', function () {
-        console.log('--------Execute--------');
+        console.log('--------EXECUTE--------');
         var jsonrpc = getJsonRpc();
         jsonrpc.method = 'execute';
         for (var i in data) {
@@ -68,11 +68,38 @@ exports.action = function (data, callback, config, SARAH) {
      ** @function update
      ***************************************************/
     jeedomProcess.on('update', function () {
-        console.log('--------Update--------');
+        console.log('--------UPDATE--------');
         var jsonrpc = getJsonRpc();
         jsonrpc.method = 'updateXml';
         sendJsonRequest(jsonrpc, updateXml);
     });
+	
+	/***************************************************
+     ** @description Ask user
+     ** @function ask
+     ***************************************************/
+    jeedomProcess.on('ask', function () {
+        console.log('--------ASK--------');
+		console.log(data);
+		response_raw = JSON.parse(data.response);
+		response = {};
+		for(var i in response_raw){
+			response[response_raw[i]] = response_raw[i];
+		}
+        SARAH.askme(data.ask, response, data.timeout * 1000, function(answer, end){
+			console.log(answer);
+			var jsonrpc = getJsonRpc();
+			jsonrpc.method = 'askResult';
+			jsonrpc.params['id'] = data.id;
+			jsonrpc.params['response'] = answer;
+			sendJsonRequest(jsonrpc, end);
+		});
+    });
+	
+	/***************************************************
+     ** @description sendJsonRequest
+     ** @function sendJsonRequest
+     ***************************************************/
 
 	function sendJsonRequest(_jsonrpc, callback){
         var adresse = config.addrJeedom;
@@ -80,6 +107,7 @@ exports.action = function (data, callback, config, SARAH) {
             adresse = 'http://' + adresse;
         }
         console.log('Adresse : ' + adresse + pathJeedomApi);
+		console.log(_jsonrpc)
         var request = require('request');
         request({
             url: adresse + pathJeedomApi,
@@ -198,6 +226,11 @@ exports.action = function (data, callback, config, SARAH) {
      ** Main
      ************************************************************************************************/
     console.log('Plugin "jeedom" for Sarah starting');
-    config = config.modules.jeedom;
+    config = Config.modules.jeedom;
+	if (!config.apikeyJeedom){
+		console.log("Clef api manquante");
+		callback({'tts' : 'Clef api manquante'});
+		return;
+	}
     jeedomProcess.emit(data.method);
 };

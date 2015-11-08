@@ -92,6 +92,11 @@ class sarah extends eqLogic {
 		}
 	}
 
+	public function ask($_ask, $_response, $_timeout = 300) {
+		$http = new com_http($this->getConfiguration('addrSrv') . '/sarah/jeedom?method=ask&ask=' . urlencode($_ask) . '&response=' . urlencode(json_encode($_response)) . '&timeout=' . $_timeout . '&id=' . $this->getId());
+		$return = $http->exec(30);
+	}
+
 }
 
 class sarahCmd extends cmd {
@@ -108,7 +113,11 @@ class sarahCmd extends cmd {
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'speak') {
-			$eqLogic->say($_options['message']);
+			if (isset($_options['variable'])) {
+				$eqLogic->ask($_options['message'], $_options['answer'], $_options['timeout']);
+			} else {
+				$eqLogic->say($_options['message']);
+			}
 		}
 		if ($this->getLogicalId() == 'updateXml') {
 			$eqLogic->updateSrvSarah();
