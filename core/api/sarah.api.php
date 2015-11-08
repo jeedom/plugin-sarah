@@ -30,10 +30,10 @@ if ($jsonrpc->getMethod() == 'updateXml') {
 
 if ($jsonrpc->getMethod() == 'execute') {
 	$interactQuery = interactQuery::byId($params['id']);
-	if (!is_object($interactQuery)) {
-		throw new Exception(__('Aucune correspondance pour l\'id ', __FILE__) . $params['id'] . __('. Veuillez mettre à jour le xml.', __FILE__), -32605);
+	if (is_object($interactQuery)) {
+		$jsonrpc->makeSuccess($interactQuery->executeAndReply($params));
 	}
-	$jsonrpc->makeSuccess($interactQuery->executeAndReply($params));
+	$jsonrpc->makeSuccess(interactQuery::tryToReply($params['text'], $params));
 }
 
 if ($jsonrpc->getMethod() == 'askResult') {
