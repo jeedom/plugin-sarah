@@ -232,5 +232,10 @@ exports.action = function (data, callback) {
 		callback({'tts' : 'Clef api manquante'});
 		return;
 	}
-    jeedomProcess.emit(data.method);
+	console.log(data);
+	if(data.method == 'execute' || data.method == 'ask' || data.method == 'update'){
+		jeedomProcess.emit(data.method);
+	}else{
+		callback();
+	}
 };
