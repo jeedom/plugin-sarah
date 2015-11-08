@@ -33,9 +33,21 @@ class sarah extends eqLogic {
 		$xml .= "<one-of>\r\n";
 		foreach (interactQuery::all() as $interactQuery) {
 			$query = $interactQuery->getQuery();
+			if (preg_match("/[[:digit:]]/", $query) || preg_match("/\+|\(|\)/", $query)) {
+				continue;
+			}
 			preg_match_all("/#(.*?)#/", $query, $matches);
-			if (count($matches[1]) == 0 && !preg_match("/[[:digit:]]/", $query) && !preg_match("/\+|\(|\)/", $query)) {
+			if (count($matches[1]) == 0) {
 				$xml .= "<item>" . $interactQuery->getQuery() . "<tag>out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\"</tag></item>\r\n";
+			} else {
+				$xml .= "<item>";
+				$xml .= "<tag>out.action.id=\"" . $interactQuery->getId() . "\"; out.action.method=\"execute\";out.action._attributes.dictation=\"true\"</tag>\r\n";
+				$replace = array();
+				foreach ($matches[0] as $match) {
+					$replace[$match] = "</item><ruleref special=\"GARBAGE\" /><item>";
+				}
+				$xml .= str_replace('<item></item>', '', "<item>" . str_replace(array_keys($replace), $replace, $interactQuery->getQuery()) . "</item>\r\n");
+				$xml .= "</item>\r\n";
 			}
 		}
 		$xml .= "</one-of>\r\n";
