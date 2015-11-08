@@ -78,6 +78,20 @@ class sarah extends eqLogic {
 		$sarahCmd->save();
 	}
 
+	public function say($_message) {
+		$http = new com_http($this->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($_message));
+		if ($this->getConfiguration('doNotThrowError', 0) == 1) {
+			$http->setNoReportError(true);
+		}
+		try {
+			return $http->exec();
+		} catch (Exception $e) {
+			if ($this->getConfiguration('doNotThrowError', 0) == 0) {
+				throw $e;
+			}
+		}
+	}
+
 }
 
 class sarahCmd extends cmd {
@@ -94,17 +108,7 @@ class sarahCmd extends cmd {
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'speak') {
-			$http = new com_http($eqLogic->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($_options['message']));
-			if ($eqLogic->getConfiguration('doNotThrowError', 0) == 1) {
-				$http->setNoReportError(true);
-			}
-			try {
-				return $http->exec();
-			} catch (Exception $e) {
-				if ($eqLogic->getConfiguration('doNotThrowError', 0) == 0) {
-					throw $e;
-				}
-			}
+			$eqLogic->say($_options['message']);
 		}
 		if ($this->getLogicalId() == 'updateXml') {
 			$eqLogic->updateSrvSarah();
