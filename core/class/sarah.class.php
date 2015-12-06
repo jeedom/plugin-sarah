@@ -128,6 +128,10 @@ class sarahCmd extends cmd {
 			if (isset($_options['variable'])) {
 				$eqLogic->ask($_options['message'], $_options['answer'], $_options['timeout']);
 			} else {
+				if (strstr($_options['message'], '|')) {
+					$messages = explode('|', $_options['message']);
+					$_options['message'] = $messages[array_rand($messages)];
+				}
 				$eqLogic->say($_options['message']);
 			}
 		}
