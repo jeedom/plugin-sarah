@@ -20,7 +20,6 @@ Voilà à quoi ressemble la page du plugin SMS (ici avec déjà 1 équipement) :
 
 image::../images/sarah3.PNG[]
 
-[icon="../images/plugin/tip.png"]
 [TIP]
 Comme à beaucoup d'endroits sur Jeedom, placer la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez, à partir de votre profil, le laisser toujours visible).
 

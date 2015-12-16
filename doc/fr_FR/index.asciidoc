@@ -1,13 +1,8 @@
-:icons:
-== S.A.R.A.H
+= S.A.R.A.H
 
-=== Description
+== Description
 Plugin permettant à Jeedom de communiquer avec l'application S.A.R.A.H (reconnaissance vocale).
 
 '''
-=== Configuration
+== Configuration
 include::configuration.asciidoc[]
-
-'''
-=== FAQ
-include::faq.asciidoc[]
