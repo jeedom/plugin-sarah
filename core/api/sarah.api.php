@@ -45,6 +45,10 @@ if ($jsonrpc->getMethod() == 'askResult') {
 	if (!is_object($cmd)) {
 		throw new Exception(__('Commande speak de sarah non trouvée', __FILE__), -32605);
 	}
+	$cmd = $sarah->getCmd('action', 'play');
+	if (!is_object($cmd)) {
+		throw new Exception(__('Commande play de sarah non trouvée', __FILE__), -32605);
+	}
 	if ($cmd->getConfiguration('storeVariable', 'none') != 'none') {
 		$dataStore = new dataStore();
 		$dataStore->setType('scenario');

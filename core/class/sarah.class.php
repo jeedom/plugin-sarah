@@ -78,6 +78,18 @@ class sarah extends eqLogic {
 		$sarahCmd->setSubType('message');
 		$sarahCmd->save();
 
+		$sarahCmd = $this->getCmd(null, 'play');
+		if (!is_object($sarahCmd)) {
+			$sarahCmd = new sarahCmd();
+		}
+		$sarahCmd->setName('Jouer');
+		$sarahCmd->setLogicalId('play');
+		$sarahCmd->setDisplay('title_disable', 1);
+		$sarahCmd->setEqLogic_id($this->getId());
+		$sarahCmd->setType('action');
+		$sarahCmd->setSubType('message');
+		$sarahCmd->save();
+
 		$sarahCmd = $this->getCmd(null, 'updateXml');
 		if (!is_object($sarahCmd)) {
 			$sarahCmd = new sarahCmd();
@@ -92,6 +104,20 @@ class sarah extends eqLogic {
 
 	public function say($_message) {
 		$http = new com_http($this->getConfiguration('addrSrvTts') . '/?tts=' . urlencode($_message));
+		if ($this->getConfiguration('doNotThrowError', 0) == 1) {
+			$http->setNoReportError(true);
+		}
+		try {
+			return $http->exec();
+		} catch (Exception $e) {
+			if ($this->getConfiguration('doNotThrowError', 0) == 0) {
+				throw $e;
+			}
+		}
+	}
+
+	public function play($_message) {
+		$http = new com_http($this->getConfiguration('addrSrvTts') . '/?play=medias/' . urlencode($_message));
 		if ($this->getConfiguration('doNotThrowError', 0) == 1) {
 			$http->setNoReportError(true);
 		}
@@ -134,6 +160,9 @@ class sarahCmd extends cmd {
 				}
 				$eqLogic->say($_options['message']);
 			}
+		}
+		if ($this->getLogicalId() == 'play') {
+			$eqLogic->play($_options['message']);
 		}
 		if ($this->getLogicalId() == 'updateXml') {
 			$eqLogic->updateSrvSarah();
