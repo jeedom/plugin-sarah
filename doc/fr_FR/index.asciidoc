@@ -2,6 +2,7 @@
 
 == Description
 Plugin permettant à Jeedom de communiquer avec l'application S.A.R.A.H (reconnaissance vocale).
+D'effectuer des annonces vocales et de jouer des sons à partir de Jeedom.
 
 '''
 == Configuration

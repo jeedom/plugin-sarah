@@ -36,7 +36,17 @@ Vous retrouvez ici :
 * *Adresse du TTS* : IP de S.A.R.A.H. + port du serveur TTS (par défaut le port et le 8888)
 * *Ne pas remonter d'erreur si S.A.R.A.H. n'est pas là* : A cocher si S.A.R.A.H. n'est pas démarrée en permanence
 
-Chaque équipement de type S.A.R.A.H. crée aussi une commande “dit” qui permet dans les scénarios de faire dire un texte à Jeedom.
+
+Chaque équipement de type S.A.R.A.H. crée aussi une commande :
+
+* *Dit* : Qui permet dans les scénarios de faire dire un texte à Jeedom.
+* *Jouer* : Qui permet d'exécuter un fichier audio de type .mp3 ou .wav. Ses fichiers Audio doivent être placés dans le dossier *"medias"* qui se trouve à la racine de votre application S.A.R.A.H.
+          Dans votre scénario, il suffira d'indiquer le nom de votre fichier audio à exéctuer.
+
+image::../images/sarah5.PNG[]
+
+* *Mettre à jour la grammaire* : Qui permet par l'intermédiaire d'un scénario, de regénérer la grammaire XML à partir des interactions Jeedom.
+
 
 Le bouton "synchroniser" permet d'envoyer à S.A.R.A.H. la liste de toutes les interactions, il faut le faire à chaque mise à jour des interactions. 
 
