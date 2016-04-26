@@ -15,7 +15,7 @@
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
 
-exports.action = function (data, callback) {
+exports.action = function (data, callback, config, SARAH) {
     var debug = false;
 
     /************************************************************************************************
@@ -87,7 +87,7 @@ exports.action = function (data, callback) {
 			response[response_raw[i]] = response_raw[i];
 		}
         SARAH.askme(data.ask, response, data.timeout * 1000, function(answer, end){
-			console.log(answer);
+			console.log('Answer : ' + answer);
 			var jsonrpc = getJsonRpc();
 			jsonrpc.method = 'askResult';
 			jsonrpc.params['id'] = data.id;
@@ -226,7 +226,7 @@ exports.action = function (data, callback) {
      ** Main
      ************************************************************************************************/
     console.log('Plugin "jeedom" for Sarah starting');
-    config = Config.modules.jeedom;
+    config = config.modules.jeedom;
 	if (!config.apikeyJeedom){
 		console.log("Clef api manquante");
 		callback({'tts' : 'Clef api manquante'});

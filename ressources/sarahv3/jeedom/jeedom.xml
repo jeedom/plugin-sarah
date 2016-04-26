@@ -1,0 +1,10 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleJeedom" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+<rule id="ruleJeedom" scope="public">
+<tag>out.action=new Object(); </tag>
+<item>SARAH</item>
+<one-of>
+
+</one-of>
+<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/jeedom";</tag>
+</rule>
+</grammar>

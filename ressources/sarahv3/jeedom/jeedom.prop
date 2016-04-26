@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "jeedom"  : {
+      "description": "Plugin pour commander jeedom",
+      "version": "1.5",
+      "addrJeedom"    : "http://[IP_JEEDOM]:[PORT_JEEDOM]",
+      "apikeyJeedom"  : "[CLE_API_JEEDOM]"
+    }
+  }
+}
