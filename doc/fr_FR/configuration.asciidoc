@@ -47,7 +47,7 @@ Chaque équipement de type S.A.R.A.H. crée aussi une commande :
 * *Dit* : Qui permet dans les scénarios de faire dire un texte à Jeedom. Il est possible d'annoncer une phrase de manière aléatoire en séparant vos phrases par un Pipe : |
 		  Exemple : La porte d'entrée est ouverte.|Une personne a ouvert la porte d'entrée.|Porte d'entrée, ouverte.
 		  Ainsi, lors de l'annonce, une de ses 3 phrases sera choisie au hasard.
-* *Jouer* : Qui permet d'exécuter un fichier audio de type .mp3 ou .wav. Ses fichiers Audio doivent être placés dans le dossier *"medias"* qui se trouve à la racine de votre application S.A.R.A.H.
+* *Jouer* : Qui permet d'exécuter un fichier audio de type .mp3 ou .wav. Ses fichiers Audio doivent être placés pour la *v3* : dans le dossier *"medias"* à la racine ou *v4* : dans le dossier *"client/medias"* de votre application S.A.R.A.H.
           Dans votre scénario, il suffira d'indiquer le nom de votre fichier audio à exéctuer.
 
 image::../images/sarah5.PNG[]
