@@ -16,13 +16,15 @@
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
+require_once dirname(__FILE__) . "/../../../../core/php/core.inc.php";
 
 global $jsonrpc;
 if (!is_object($jsonrpc)) {
 	throw new Exception(__('JSONRPC object not defined', __FILE__), -32699);
 }
+
 $params = $jsonrpc->getParams();
+
 if ($jsonrpc->getMethod() == 'updateXml') {
 	log::add('sarah', 'info', 'Appels api pour generation de grammaire');
 	$jsonrpc->makeSuccess(sarah::generateXmlGrammar());
@@ -41,14 +43,12 @@ if ($jsonrpc->getMethod() == 'askResult') {
 	if (!is_object($sarah)) {
 		throw new Exception(__('Aucune correspondance pour l\'id sarah : ', __FILE__) . $params['id'], -32605);
 	}
+
 	$cmd = $sarah->getCmd('action', 'speak');
 	if (!is_object($cmd)) {
 		throw new Exception(__('Commande speak de sarah non trouvée', __FILE__), -32605);
 	}
-	$cmd = $sarah->getCmd('action', 'play');
-	if (!is_object($cmd)) {
-		throw new Exception(__('Commande play de sarah non trouvée', __FILE__), -32605);
-	}
+
 	if ($cmd->getConfiguration('storeVariable', 'none') != 'none') {
 		$dataStore = new dataStore();
 		$dataStore->setType('scenario');
@@ -60,6 +60,11 @@ if ($jsonrpc->getMethod() == 'askResult') {
 		$cmd->save();
 	}
 	$jsonrpc->makeSuccess();
+
+	$cmd = $sarah->getCmd('action', 'play');
+	if (!is_object($cmd)) {
+		throw new Exception(__('Commande play de sarah non trouvée', __FILE__), -32605);
+	}
 }
 
 throw new Exception(__('Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod(), __FILE__));

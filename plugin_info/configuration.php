@@ -35,7 +35,13 @@ if (!isConnect()) {
         <div class="form-group">
             <label class="col-lg-4 control-label">{{Télécharger le plugin}}</label>
             <div class="col-lg-4">
-                <a class="btn btn-default" href="plugins/sarah/resources/sarah.zip"><i class="fa fa-cloud-download"></i> {{Télécharger pour installer dans S.A.R.A.H}}</a>
+                <a class="btn btn-default" href="plugins/sarah/resources/sarahv3.zip"><i class="fa fa-cloud-download"></i> {{Télécharger pour installer dans S.A.R.A.H v3}}</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-4 control-label"></label>
+            <div class="col-lg-4">
+                <a class="btn btn-default" href="plugins/sarah/resources/sarahv4.zip"><i class="fa fa-cloud-download"></i> {{Télécharger pour installer dans S.A.R.A.H v4}}</a>
             </div>
         </div>
     </fieldset>
