@@ -16,7 +16,7 @@
  */
 
 exports.action = function (data, callback, config, SARAH) {
-    var debug = true;
+    var debug = false;
 
     /************************************************************************************************
      ** require list
