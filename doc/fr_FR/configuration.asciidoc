@@ -63,7 +63,13 @@ Voici un simple exemple d'utilisation :
 
 image::../images/sarah6.PNG[]
 
+Quand vous aurez ajouter la commande action "*Faire une Demande*", vous allez voir apparaitre 5 champs à complèter :
 
+* *Question* : La question que vous désirez que Jeedom vous pose.
+* *Réponse* : Les choix de réponses que vous désirez pour pouvoir interagir suite à la question. Chaque réponse doit être séparée par un point virgule.
+* *Variable* : Ce sera le nom de la variable dans laquelle vous aimeriez que votre réponse soit enregistrée, afin de pouvoir faire une évaluation pour la suite du scénario.
+* *Délai(sec)* : Le temps en seconde, avant que le scénario continue pour effectuer l'évaluation de votre réponse.
+* *Commandes* : Sera la commande "*Dit*" de votre équipement SARAH.
 
 
 ==== Configuration dans S.A.R.A.H.
