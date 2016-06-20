@@ -60,11 +60,6 @@ if ($jsonrpc->getMethod() == 'askResult') {
 		$cmd->save();
 	}
 	$jsonrpc->makeSuccess();
-
-	$cmd = $sarah->getCmd('action', 'play');
-	if (!is_object($cmd)) {
-		throw new Exception(__('Commande play de sarah non trouvée', __FILE__), -32605);
-	}
 }
 
 throw new Exception(__('Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod(), __FILE__));
