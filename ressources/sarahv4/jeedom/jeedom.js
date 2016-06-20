@@ -160,6 +160,7 @@ exports.action = function (data, callback, config, SARAH) {
             if (err) {
                 console.log('ERREUR Sarah: Update du fichier jeedom.xml impossible');
             } else {
+                callbackReturn.emit('tts', _xml);
                 console.log('Mise à jour du xml réussi');
             }
         });
