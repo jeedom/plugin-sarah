@@ -49,15 +49,14 @@ if ($jsonrpc->getMethod() == 'askResult') {
 		throw new Exception(__('Commande speak de sarah non trouvée', __FILE__), -32605);
 	}
 
-	if ($cmd->getConfiguration('storeVariable', 'none') != 'none') {
+	if ($cmd->getCache('storeVariable', 'none') != 'none') {
 		$dataStore = new dataStore();
 		$dataStore->setType('scenario');
-		$dataStore->setKey($cmd->getConfiguration('storeVariable', 'none'));
+		$dataStore->setKey($cmd->getCache('storeVariable', 'none'));
 		$dataStore->setValue($params['response']);
 		$dataStore->setLink_id(-1);
 		$dataStore->save();
-		$cmd->setConfiguration('storeVariable', 'none');
-		$cmd->save();
+		$cmd->setCache('storeVariable', 'none');
 	}
 	$jsonrpc->makeSuccess();
 }
