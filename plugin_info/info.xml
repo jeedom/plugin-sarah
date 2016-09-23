@@ -3,12 +3,9 @@
     <id>sarah</id>
     <name>Sarah</name>
     <description>Plugin pour utiliser Sarah (http://encausse.wordpress.com/s-a-r-a-h/)</description>
-    <icon>fa fa-volume-up</icon>
     <licence>AGPL</licence>
-    <author>Loïc Gevrey</author>
-    <installation>Aucune</installation>
+    <author>Loïc</author>
     <require>2.0</require>
-    <version>1.5</version>
     <category>communication</category>
 </info>
 
