@@ -1,0 +1,24 @@
+{
+    "plugins/sarah/plugin_info/configuration.php": {
+        "Nom S.A.R.A.H": "S.A.R.A.H name"
+    },
+    "plugins/sarah/desktop/php/sarah.php": {
+        "Ajouter une S.A.R.A.H": "Add a S.A.R.A.H",
+        "Rechercher": "Search",
+        "Mes S.A.R.A.H": "My S.A.R.A.H",
+        "Générale": "Main",
+        "Nom de l'équipement S.A.R.A.H": "S.A.R.A.H device's name",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Activer": "Activate",
+        "Adresse du nodeJS": "NodeJS address",
+        "Adresse du TTS": "TTS address",
+        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Do not report error if S.A.R.A.H is not here",
+        "Synchroniser": "Synchronize",
+        "Supprimer": "Delete",
+        "Sauvegarder": "Save"
+    },
+    "plugins/sarah/desktop/js/sarah.js": {
+        "Demande de synchronisation reussie": "Synchronisation request completed"
+    }
+}
