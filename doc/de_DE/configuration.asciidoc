@@ -1,6 +1,6 @@
 Le plugin S.A.R.A.H. ajoute la reconnaissance vocale permettant de parler à Jeedom, faire une annonce ou jouer un son à partir de Jeedom.
 
-==== Configuration du plugin
+==== Plugin Konfiguration
 
 Une fois le plugin S.A.R.A.H. installé sur Jeedom à partir du Market, cliquez sur *Activer*.
 
