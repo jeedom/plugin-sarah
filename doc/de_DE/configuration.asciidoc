@@ -15,9 +15,9 @@ Une fois téléchargé, arrêtez le Serveur et Client S.A.R.A.H.. Décompressez 
 Quand c'est fait, vous pouvez redémarrer le client et le serveur S.A.R.A.H..
 
 
-==== Configuration des équipements
+==== Geräte Konfiguration
 
-La configuration des équipements S.A.R.A.H. est accessible à partir du menu Plugins : 
+Die Konfiguration von S.A.R.A.H.-Geräten ist in dem Plugin-Menü verfügbar : 
 
 image::../images/sarah2.PNG[]
 
@@ -72,7 +72,7 @@ Quand vous aurez ajouté la commande action "*Faire une Demande*", vous allez vo
 * *Commandes* : Sera la commande "*Dit*" de votre équipement SARAH.
 
 
-==== Configuration dans S.A.R.A.H.
+==== S.A.R.A.H. Konfiguration
 
 Sur l'interface de S.A.R.A.H., vous devriez avoir un Portlet avec le Logo *Jeedom*.
 
