@@ -50,13 +50,7 @@ if ($jsonrpc->getMethod() == 'askResult') {
 	}
 
 	if ($cmd->getCache('storeVariable', 'none') != 'none') {
-		$dataStore = new dataStore();
-		$dataStore->setType('scenario');
-		$dataStore->setKey($cmd->getCache('storeVariable', 'none'));
-		$dataStore->setValue($params['response']);
-		$dataStore->setLink_id(-1);
-		$dataStore->save();
-		$cmd->setCache('storeVariable', 'none');
+		$cmd->askResponse(($params['response']);
 	}
 	$jsonrpc->makeSuccess();
 }
