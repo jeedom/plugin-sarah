@@ -35,6 +35,7 @@ if ($jsonrpc->getMethod() == 'execute') {
 	if (is_object($interactQuery)) {
 		$jsonrpc->makeSuccess($interactQuery->executeAndReply($params));
 	}
+	$params['plugin'] = 'sarah';
 	$jsonrpc->makeSuccess(interactQuery::tryToReply($params['text'], $params));
 }
 
