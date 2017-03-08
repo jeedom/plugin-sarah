@@ -36,7 +36,9 @@ if ($jsonrpc->getMethod() == 'execute') {
 		$jsonrpc->makeSuccess($interactQuery->executeAndReply($params));
 	}
 	$params['plugin'] = 'sarah';
-	$jsonrpc->makeSuccess(interactQuery::tryToReply($params['text'], $params));
+	
+	$reply = interactQuery::tryToReply($params['text'], $params);
+	$jsonrpc->makeSuccess($reply['reply']);
 }
 
 if ($jsonrpc->getMethod() == 'askResult') {
