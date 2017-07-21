@@ -53,7 +53,7 @@ if ($jsonrpc->getMethod() == 'askResult') {
 	}
 
 	if ($cmd->getCache('storeVariable', 'none') != 'none') {
-		$cmd->askResponse(($params['response']);
+		$cmd->askResponse($params['response']);
 	}
 	$jsonrpc->makeSuccess();
 }
