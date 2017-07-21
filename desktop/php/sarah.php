@@ -91,7 +91,7 @@ foreach (object::all() as $object) {
         <div class="form-group">
             <label class="col-sm-2 control-label">{{Remonter une erreur si S.A.R.A.H n'est pas la}}</label>
             <div class="col-sm-3">
-                <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-on-color="danger" data-off-color="success" data-off-text="{{Oui}}" data-on-text="{{Non}}" data-l1key="configuration" data-l2key="doNotThrowError" />
+                <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-on-color="danger" data-off-color="success" data-off-text="{{Oui}}" data-on-text="{{Non}}" data-l1key="configuration" data-l2key="doNotThrowError" />{{Oui}}</label>
             </div>
         </div>
     </fieldset>
