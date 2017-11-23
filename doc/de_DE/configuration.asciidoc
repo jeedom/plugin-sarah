@@ -93,7 +93,7 @@ Et pour terminer, cliquez sur Enregistrer.
 
 ==== Cas d'utilisation
 
-Exemples : 
+Beispiele : 
 
 * Cela peut vous permettre de connaître toutes les remontées d’informations des différents capteurs (type “Sarah combien fait-il dehors?” ou “Sarah qu’elle est la température de la chambre”).
 * Vous pouvez également piloter les lumières (“Sarah allume la lumière du salon”), pour cela il faut bien sur avoir configuré les interactions.
