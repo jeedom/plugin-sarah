@@ -1,9 +1,9 @@
 {
     "plugins/sarah/plugin_info/configuration.php": {
-        "Nom S.A.R.A.H": "Nom S.A.R.A.H"
+        "Nom S.A.R.A.H": "Nama S.A.R.A.H"
     },
     "plugins/sarah/desktop/php/sarah.php": {
-        "Ajouter une S.A.R.A.H": "Ajouter une S.A.R.A.H",
+        "Ajouter une S.A.R.A.H": "menambahkan S.A.R.A.H",
         "Rechercher": "Mencari",
         "Mes S.A.R.A.H": "S.A.R.A.Hku",
         "Générale": "Umum",
@@ -11,14 +11,14 @@
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
-        "Adresse du nodeJS": "Adresse du nodeJS",
-        "Adresse du TTS": "Adresse du TTS",
-        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la",
+        "Adresse du nodeJS": "alamat NodeJS",
+        "Adresse du TTS": "TTS Alamat",
+        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Jangan pergi jika kesalahan S.A.R.A.H tidak",
         "Synchroniser": "Menyinkronkan",
         "Supprimer": "Menghapus",
         "Sauvegarder": "Menyimpan"
     },
     "plugins/sarah/desktop/js/sarah.js": {
-        "Demande de synchronisation reussie": "Demande de synchronisation reussie"
+        "Demande de synchronisation reussie": "permintaan sinkronisasi sukses"
     }
 }
