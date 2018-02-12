@@ -64,7 +64,7 @@ Vous retrouvez ici :
 -   **Objet parent** : indique l’objet parent auquel
     appartient l’équipement.
 
--   **Activer** : permet de rendre votre équipement actif,
+-   ** ** Activar: para que su equipo activo,
 
 -   **Adresse du nodeJS** : IP de S.A.R.A.H. + port du node JS (par
     défaut le port est le 8080)
