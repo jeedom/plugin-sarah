@@ -5,13 +5,13 @@ Plugin permettant à Jeedom de communiquer avec l’application S.A.R.A.H
 (reconnaissance vocale). D’effectuer des annonces vocales et de jouer
 des sons à partir de Jeedom.
 
-Configuration 
+Configuration
 =============
 
 Le plugin S.A.R.A.H. ajoute la reconnaissance vocale permettant de
 parler à Jeedom, faire une annonce ou jouer un son à partir de Jeedom.
 
-Configuration du plugin 
+Plugin configuration
 -----------------------
 
 Une fois le plugin S.A.R.A.H. installé sur Jeedom à partir du Market,
@@ -33,7 +33,7 @@ poste client (compatible Windows uniquement) :
 Quand c’est fait, vous pouvez redémarrer le client et le serveur
 S.A.R.A.H..
 
-Configuration des équipements 
+Equipment configuration
 -----------------------------
 
 La configuration des équipements S.A.R.A.H. est accessible à partir du
