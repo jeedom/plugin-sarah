@@ -1,8 +1,18 @@
 {
-    "plugins/sarah/plugin_info/configuration.php": {
-        "Nom S.A.R.A.H": "Nome S.A.R.A.H"
+    "plugin_info\/configuration.php": {
+        "Nom S.A.R.A.H": "Nome S.A.R.A.H",
+        "Télécharger le plugin": "Télécharger le plugin",
+        "Télécharger pour installer dans S.A.R.A.H v3": "Télécharger pour installer dans S.A.R.A.H v3",
+        "Télécharger pour installer dans S.A.R.A.H v4": "Télécharger pour installer dans S.A.R.A.H v4"
     },
-    "plugins/sarah/desktop/php/sarah.php": {
+    "desktop\/js\/sarah.js": {
+        "Historiser": "Historiser",
+        "Afficher": "Afficher",
+        "Tester": "Tester",
+        "Demande de synchronisation reussie": "solicitação de sincronização bem-sucedida"
+    },
+    "desktop\/php\/sarah.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Ajouter une S.A.R.A.H": "Adicionar S.A.R.A.H",
         "Rechercher": "Pesquisar",
         "Mes S.A.R.A.H": "minha S.A.R.A.H",
@@ -11,14 +21,25 @@
         "Objet parent": "objeto pai",
         "Aucun": "Nemhum",
         "Activer": "Ativar",
+        "Visible": "Visible",
         "Adresse du nodeJS": "NodeJS endereço",
         "Adresse du TTS": "TTS Endereço",
-        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Não vá se erro S.A.R.A.H não é",
+        "Remonter une erreur si S.A.R.A.H n'est pas la": "Remonter une erreur si S.A.R.A.H n'est pas la",
+        "Oui": "Oui",
+        "Non": "Non",
+        "Commandes": "Commandes",
+        "Nom": "Nom",
+        "Type": "Type",
+        "Action": "Action",
         "Synchroniser": "sincronizar",
         "Supprimer": "remover",
         "Sauvegarder": "Salvar"
     },
-    "plugins/sarah/desktop/js/sarah.js": {
+    "core\/ajax\/sarah.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    },
+    "core\/api\/sarah.api.php": {
         "Demande de synchronisation reussie": "solicitação de sincronização bem-sucedida"
     }
 }

@@ -1,8 +1,18 @@
 {
-    "plugins/sarah/plugin_info/configuration.php": {
-        "Nom S.A.R.A.H": "S.A.R.A.H name"
+    "plugin_info\/configuration.php": {
+        "Nom S.A.R.A.H": "S.A.R.A.H name",
+        "Télécharger le plugin": "Download the plugin",
+        "Télécharger pour installer dans S.A.R.A.H v3": "Download to install in SARAH v3",
+        "Télécharger pour installer dans S.A.R.A.H v4": "Download to install in SARAH v4"
     },
-    "plugins/sarah/desktop/php/sarah.php": {
+    "desktop\/js\/sarah.js": {
+        "Historiser": "historicize",
+        "Afficher": "Pin up",
+        "Tester": "Test",
+        "Demande de synchronisation reussie": "Synchronisation request completed"
+    },
+    "desktop\/php\/sarah.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
         "Ajouter une S.A.R.A.H": "Add a S.A.R.A.H",
         "Rechercher": "Search",
         "Mes S.A.R.A.H": "My S.A.R.A.H",
@@ -11,14 +21,28 @@
         "Objet parent": "Parent object",
         "Aucun": "None",
         "Activer": "Activate",
+        "Visible": "Visible",
         "Adresse du nodeJS": "NodeJS address",
         "Adresse du TTS": "TTS address",
-        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Do not report error if S.A.R.A.H is not here",
+        "Remonter une erreur si S.A.R.A.H n'est pas la": "Report an error if SARAH is not there",
+        "Oui": "Yes",
+        "Non": "No",
+        "Commandes": "Orders",
+        "Nom": "Last name",
+        "Type": "Type",
+        "Action": "Action",
         "Synchroniser": "Synchronize",
         "Supprimer": "Delete",
         "Sauvegarder": "Save"
     },
-    "plugins/sarah/desktop/js/sarah.js": {
-        "Demande de synchronisation reussie": "Synchronisation request completed"
+    "core\/ajax\/sarah.ajax.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Aucune methode correspondante à : ": "No method corresponding to:"
+    },
+    "core\/api\/sarah.api.php": {
+        "JSONRPC object not defined": "JSONRPC object not defined",
+        "Aucune correspondance pour l\\'id sarah : ": "No match for sarah id:",
+        "Commande speak de sarah non trouvée": "Sarah speak command not found",
+        "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()": "No corresponding method for the SARAH plugin: &#39;. $ Jsonrpc-&gt; getMethod ()"
     }
 }

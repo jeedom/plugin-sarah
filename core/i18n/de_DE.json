@@ -1,8 +1,18 @@
 {
-    "plugins/sarah/plugin_info/configuration.php": {
-        "Nom S.A.R.A.H": "S.A.R.A.H Name"
+    "plugin_info\/configuration.php": {
+        "Nom S.A.R.A.H": "S.A.R.A.H Name",
+        "Télécharger le plugin": "Laden Sie das Plugin herunter",
+        "Télécharger pour installer dans S.A.R.A.H v3": "Download zur Installation in SARAH v3",
+        "Télécharger pour installer dans S.A.R.A.H v4": "Download zur Installation in SARAH v4"
     },
-    "plugins/sarah/desktop/php/sarah.php": {
+    "desktop\/js\/sarah.js": {
+        "Historiser": "historisieren",
+        "Afficher": "Anzeige",
+        "Tester": "Test",
+        "Demande de synchronisation reussie": "Erfolgreiche Synchronisierungsanforderung"
+    },
+    "desktop\/php\/sarah.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Ajouter une S.A.R.A.H": "S.A.R.A.H hinzufügen",
         "Rechercher": "Suchen nach",
         "Mes S.A.R.A.H": "Mein S.A.R.A.H",
@@ -11,14 +21,25 @@
         "Objet parent": "Eltern-Objekt",
         "Aucun": "Ohne",
         "Activer": "Aktivieren",
+        "Visible": "sichtbar",
         "Adresse du nodeJS": "nodeJS Adresse",
         "Adresse du TTS": "TTS Adresse",
-        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Keine Fehler übergeben wenn S.A.R.A.H nicht verfügbar ist.",
+        "Remonter une erreur si S.A.R.A.H n'est pas la": "Melden Sie einen Fehler, wenn SARAH nicht vorhanden ist",
+        "Oui": "ja",
+        "Non": "nicht",
+        "Commandes": "Befehle",
+        "Nom": "Name",
+        "Type": "Typ",
+        "Action": "Aktion",
         "Synchroniser": "Synchronisieren",
         "Supprimer": "Löschen",
         "Sauvegarder": "Speichern"
     },
-    "plugins/sarah/desktop/js/sarah.js": {
+    "core\/ajax\/sarah.ajax.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Aucune methode correspondante à : ": "Keine Methode entsprechend:"
+    },
+    "core\/api\/sarah.api.php": {
         "Demande de synchronisation reussie": "Erfolgreiche Synchronisierungsanforderung"
     }
 }
