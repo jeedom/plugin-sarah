@@ -1,21 +1,21 @@
-Description 
+Descrição 
 ===========
 
 
 . 
 .
 
-Setup 
+Configuração 
 =============
 
 
 .
 
-Plugin configuration 
+Configuração do  
 -----------------------
 
 ,
-Click on **Activate**.
+ **Ativar**.
 
  ****, 
 .
@@ -23,48 +23,48 @@ Click on **Activate**.
 ![sarah1](../images/sarah1.PNG)
 
 
-**Jeedom** .
+**** .
 
 ..
- **Plugins** 
+ **** 
  :
 <http://encausse.wordpress.com/s-a-r-a-h/>
 
 
 ..
 
-Equipment configuration 
+ 
 -----------------------------
 
 
-Plugins menu :
+ :
 
 ![sarah2](../images/sarah2.PNG)
 
 
-equipment) :
+ :
 
 ![sarah3](../images/sarah3.PNG)
 
-> **Tip**
+> ****
 >
-> As in many places on Jeedom, place the mouse on the far left
-> brings up a quick access menu (you can, at
-> from your profile, always leave it visible).
+> 
+> 
+> .
 
-Once you click on one of them, you get :
+ :
 
 ![sarah4](../images/sarah4.PNG)
 
  :
 
--   **** : name of your equipment
+-   **** : 
     .,
 
--   **Parent object** : 
+-   **Objeto pai** : 
     .
 
--   **Activate** : makes your equipment active,
+-   **Ativar** : ,
 
 -   **** : 
     
@@ -79,17 +79,17 @@ Once you click on one of them, you get :
 
 -   **** : 
     . 
-     : | Example : 
+     : |  : 
     .|.|
     
     .
 
 -   **** : 
     .  **** :
-     **""**  **V4** : 
+     **""**  **** : 
     **""** 
     
-    To execute.
+    Uma corrida.
 
 ![sarah5](../images/sarah5.PNG)
 
@@ -99,26 +99,26 @@ Once you click on one of them, you get :
 
 
 
-interActions.
+Interações.
 
  **** 
 
-Action "**Do a request**".
+Ação "**Aplicar**".
 
  :
 
 ![sarah6](../images/sarah6.PNG)
 
- "**Do a request**", You
+ "**Aplicar**", 
  :
 
--   **Question** : .
+-   **** : .
 
--   **Reply** : 
+-   **Réponse ** : 
     . 
     .
 
--   **Variable** : 
+-   **Variável** : 
     
     .
 
@@ -126,14 +126,14 @@ Action "**Do a request**".
     
     .
 
--   **Commands** :  "****" 
+-   **Comandos** :  "****" 
     .
 
 . 
 -----------------------------
 
 
- **Jeedom**.
+ ****.
 
 **** :
 
@@ -145,23 +145,23 @@ Action "**Do a request**".
 
 
 **** 
-Plugin.
+.
 
-IN ****,  **]** 
+Dans ****,  **]** 
  **]**, .
  ****, 
 .
 
-IN ****,  **]** 
+Dans ****,  **]** 
 
 .
 
 .
 
-Use case 
+ 
 -----------------
 
-Examples :
+ :
 
 -   
     d'informations des différents capteurs (type “ combien fait-il
@@ -169,7 +169,7 @@ Examples :
 
 -   Vous pouvez également piloter les lumières (“ allume la lumière
     du salon”), pour cela il faut bien sur avoir configuré
-    The interActions.
+    .
 
 -   ,
     ,

@@ -1,45 +1,48 @@
 {
-    "plugin_info\/configuration.php": {
-        "Nom S.A.R.A.H": "Nome S.A.R.A.H",
-        "Télécharger le plugin": "Télécharger le plugin",
-        "Télécharger pour installer dans S.A.R.A.H v3": "Télécharger pour installer dans S.A.R.A.H v3",
-        "Télécharger pour installer dans S.A.R.A.H v4": "Télécharger pour installer dans S.A.R.A.H v4"
+    "plugins\/sarah\/plugin_info\/configuration.php": {
+        "Nom S.A.R.A.H": "",
+        "Télécharger le plugin": "",
+        "Télécharger pour installer dans S.A.R.A.H v3": "",
+        "Télécharger pour installer dans S.A.R.A.H v4": ""
     },
-    "desktop\/js\/sarah.js": {
-        "Historiser": "Historiser",
-        "Afficher": "Afficher",
-        "Tester": "Tester",
-        "Demande de synchronisation reussie": "richiesta sincronizzazione corretta"
-    },
-    "desktop\/php\/sarah.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Ajouter une S.A.R.A.H": "Aggiungere S.A.R.A.H",
-        "Rechercher": "Cerca",
-        "Mes S.A.R.A.H": "il mio S.A.R.A.H",
+    "plugins\/sarah\/desktop\/php\/sarah.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Ajouter une S.A.R.A.H": "",
+        "Rechercher": "Ricercare",
+        "Mes S.A.R.A.H": "",
         "Générale": "Principale",
-        "Nom de l'équipement S.A.R.A.H": "Nome dispositivo S.A.R.A.H",
+        "Nom de l'équipement S.A.R.A.H": "",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
-        "Activer": "Attiva",
-        "Visible": "Visible",
-        "Adresse du nodeJS": "NodeJS Indirizzo",
-        "Adresse du TTS": "TTS Indirizzo",
-        "Remonter une erreur si S.A.R.A.H n'est pas la": "Remonter une erreur si S.A.R.A.H n'est pas la",
-        "Oui": "Oui",
-        "Non": "Non",
-        "Commandes": "Commandes",
-        "Nom": "Nom",
-        "Type": "Type",
-        "Action": "Action",
-        "Synchroniser": "Sincronizza",
-        "Supprimer": "Elimina",
+        "Activer": "Attivare",
+        "Visible": "Visibile",
+        "Adresse du nodeJS": "",
+        "Adresse du TTS": "",
+        "Remonter une erreur si S.A.R.A.H n'est pas la": "",
+        "Oui": "Sì",
+        "Non": "No",
+        "Commandes": "Comandi",
+        "Nom": "Nome",
+        "Type": "Tipo",
+        "Action": "Azione",
+        "Synchroniser": "Sincronizzare",
+        "Supprimer": "Rimuovere",
         "Sauvegarder": "Salva"
     },
-    "core\/ajax\/sarah.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    "plugins\/sarah\/desktop\/js\/sarah.js": {
+        "Historiser": "Storicizza",
+        "Afficher": "Mostra",
+        "Tester": "Prova",
+        "Demande de synchronisation reussie": ""
     },
-    "core\/api\/sarah.api.php": {
-        "Demande de synchronisation reussie": "richiesta sincronizzazione corretta"
+    "plugins\/sarah\/core\/ajax\/sarah.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Aucune methode correspondante à : ": "Nessun metodo corrispondente a:"
+    },
+    "plugins\/sarah\/core\/api\/sarah.api.php": {
+        "JSONRPC object not defined": "",
+        "Aucune correspondance pour l\\'id sarah : ": "",
+        "Commande speak de sarah non trouvée": "",
+        "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()": ""
     }
 }
