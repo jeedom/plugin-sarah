@@ -109,7 +109,7 @@ Aquí hay un ejemplo simple de uso :
 
 ![sarah6](../images/sarah6.PNG)
 
-Cuando haya agregado el comando de acción "**Hacer un pedido**", Vosotras
+Cuando haya agregado el comando de acción "**Hacer un pedido**", vous
 verá 5 campos que parecen estar completos :
 
 -   **Question** : La pregunta que quieres que te haga Jeedom.
@@ -141,7 +141,7 @@ Haga clic en las flechas dobles en la parte superior del portlet para rotar
 la imagen para el resto, haga clic en la tecla en la parte inferior izquierda del portlet
 para acceder a la ventana de configuración del complemento.
 
-**SARAH V4** :
+**SARAH v4** :
 
 Haga clic en la rueda de estrella en la parte inferior del portlet y luego en
 **Configurar la extensión** para acceder a la ventana de configuración de la
@@ -181,6 +181,6 @@ Ejemplos :
     está terminado. Entonces ella te hace la pregunta, "debería apagar
     la lavadora ?".
 
--   Y ...
+-   Ets…​
 
 El único límite será tu imaginación..

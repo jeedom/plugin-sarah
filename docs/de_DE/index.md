@@ -109,7 +109,7 @@ Hier ist ein einfaches Anwendungsbeispiel :
 
 ![sarah6](../images/sarah6.PNG)
 
-Wenn Sie den Aktionsbefehl hinzugefügt haben "**Stellen Sie eine Anfrage**", Sie
+Wenn Sie den Aktionsbefehl hinzugefügt haben "**Stellen Sie eine Anfrage**", vous
 Es werden 5 Felder angezeigt, die ausgefüllt zu sein scheinen :
 
 -   **Question** : Die Frage, die Jeedom Ihnen stellen soll.
@@ -181,6 +181,6 @@ Beispiele :
     ist fertig. Dann stellt sie dir die Frage: "Soll ich ausschalten?
     die Waschmaschine ?".
 
--   Und ...
+-   Ets…​
 
 Die einzige Grenze wird Ihre Vorstellungskraft sein.

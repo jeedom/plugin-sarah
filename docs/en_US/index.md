@@ -22,7 +22,7 @@ put Jarvis or Jeedom for example).
 
 ![sarah1](../images/sarah1.PNG)
 
-Then click on one of the buttons to download the Plugin
+Then click on one of the buttons to download the plugin
 **Jeedom** for the version of SARAH you are using, v3 or V4.
 
 Once downloaded, stop the SARAH Server and Client..
@@ -109,7 +109,7 @@ Here is a simple example of use :
 
 ![sarah6](../images/sarah6.PNG)
 
-When you have added the Action command "**Do a request**", You
+When you have added the Action command "**Do a request**", vous
 will see 5 fields appear to be completed :
 
 -   **Question** : The question you want Jeedom to ask you.
@@ -141,7 +141,7 @@ Click on the double arrows at the top of the Portlet to rotate
 the image for the rest, click on the key at the bottom left of the Portlet
 to access the Plugin configuration window.
 
-**SARAH V4** :
+**SARAH v4** :
 
 Click on the star wheel at the bottom of the Portlet and then on
 **Configure the extension** to access the configuration window of the
@@ -181,6 +181,6 @@ Examples :
     is finished. Then she asks you the question, "should I turn off
     washing machine ?".
 
--   And ...
+-   Ets…​
 
 The only limit will be your imagination.

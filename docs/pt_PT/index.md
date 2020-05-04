@@ -109,7 +109,7 @@ Aqui está um exemplo simples de uso :
 
 ![sarah6](../images/sarah6.PNG)
 
-Quando você adiciona o comando Ação "**Aplicar**", você
+Quando você adiciona o comando Ação "**Aplicar**", vous
 verá 5 campos parecem estar preenchidos :
 
 -   **Question** : A pergunta que você deseja que o Jeedom faça.
@@ -181,6 +181,6 @@ Exemplos :
     está terminado. Então ela faz a pergunta: "devo desligar
     a máquina de lavar ?".
 
--   E ...
+-   Ets…​
 
 O único limite será a sua imaginação.
