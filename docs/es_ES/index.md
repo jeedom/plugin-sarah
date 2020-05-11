@@ -11,11 +11,11 @@ Configuración
 El complemento SARAH agrega reconocimiento de voz a
 hable con Jeedom, haga un anuncio o reproduzca un sonido de Jeedom.
 
-Configuración del Plugin 
+Configuración del plugin 
 -----------------------
 
 Una vez que el complemento SARAH se instaló en Jeedom del mercado,
-Haga clic en **Activer**.
+Haga clic en **Activar**.
 
 Configurar el nombre de Sarah (predeterminado **Sarah**, pero tu puedes
 poner Jarvis o Jeedom por ejemplo).
@@ -23,7 +23,7 @@ poner Jarvis o Jeedom por ejemplo).
 ![sarah1](../images/sarah1.PNG)
 
 Luego haga clic en uno de los botones para descargar el complemento
-**Jeedom** para la versión de SARAH que está utilizando, v3 o V4.
+**Jeedom** para la versión de SARAH que está utilizando, v3 o v4.
 
 Una vez descargado, detenga el Servidor SARAH y el Cliente..
 Descomprima el archivo en la carpeta **plugins** de SARAH en el
@@ -46,7 +46,7 @@ equipos) :
 
 ![sarah3](../images/sarah3.PNG)
 
-> **Tip**
+> **Punta**
 >
 > Como en muchos lugares de Jeedom, coloca el mouse en el extremo izquierdo
 > muestra un menú de acceso rápido (puede, en
@@ -64,7 +64,7 @@ Lo encuentras aqui :
 -   **Objeto padre** : indica el objeto padre al que
     pertenece equipo.
 
--   **Activer** : activa su equipo,
+-   **Activar** : activa su equipo,
 
 -   **Dirección NodeJS** : Puerto de nodo SARAH IP + JS (por
     el puerto predeterminado es 8080)
@@ -77,16 +77,16 @@ Lo encuentras aqui :
 
 Cada equipo tipo SARAH también crea un pedido :
 
--   **Dit** : Lo que permite en los escenarios hacer decir un texto
+-   **Dijo** : Lo que permite en los escenarios hacer decir un texto
     en Jeedom. Es posible anunciar una oración al azar
     separando tus oraciones con una tubería : | Ejemplo : La puerta de entrada
     está abierto.|Una persona abrió la puerta de entrada.|Puerta principal
     abierto Entonces, durante el anuncio, se elegirá una de sus 3 oraciones
     al azar.
 
--   **Jouer** : Lo que permite ejecutar un archivo de audio de tipo .mp3
+-   **Jugar** : Lo que permite ejecutar un archivo de audio de tipo .mp3
     o .wav. Estos archivos de audio deben colocarse para **v3** :
-    en la carpeta **"medias"** en la raíz o **v4** : en la carpeta
+    en la carpeta **"medias"** en la raíz o **V4** : en la carpeta
     **"cliente / medios"** de su aplicación SARAH en su
     escenario, solo indique el nombre de su archivo de audio
     A Ejecutar.
@@ -101,7 +101,7 @@ El botón "sincronizar" permite enviar a SARAH la lista de
 todas las interacciones, debe hacerse con cada actualización de
 interactions.
 
-Si quieres usar la función **Ask** de Sarah, es
+Si quieres usar la función **Preguntar** de Sarah, es
 posible hacerlo desde un escenario Jeedom usando un
 Acción "**Hacer un pedido**".
 
@@ -112,7 +112,7 @@ Aquí hay un ejemplo simple de uso :
 Cuando haya agregado el comando de acción "**Hacer un pedido**", vous
 verá 5 campos que parecen estar completos :
 
--   **Question** : La pregunta que quieres que te haga Jeedom.
+-   **Pregunta** : La pregunta que quieres que te haga Jeedom.
 
 -   **Respuesta** : Las opciones de respuesta que desea poder
     interactuar siguiendo la pregunta. Cada respuesta debe estar separada por
@@ -126,7 +126,7 @@ verá 5 campos que parecen estar completos :
     continuar completando la evaluación, si no se recibe respuesta
     dado (Tiempo de espera).
 
--   **Commandes** : Será orden "**Dit**" de su
+-   **Comandos** : Será orden "**Dijo**" de su
     Equipo SARAH.
 
 Configuración en SARAH. 
@@ -149,7 +149,7 @@ plugin.
 
 DENTRO **addrJeedom**, reemplazar **\ [IP\_JEEDOM \]** por su IP
 Jeedom y reemplazar **\ [PORT\_JEEDOM \]**, vistiendo tu Jeedom.
-Si su Jeedom usa la extensión **/jeedom**, no te olvides de
+Si su Jeedom usa la extensión **/ jeedom**, no te olvides de
 indicarlo después de usar.
 
 DENTRO **apikeyJeedom**, reemplazar **\ [CLE\_API\_JEEDOM \]** por la llave
@@ -176,11 +176,11 @@ Ejemplos :
     anuncia la presencia de un visitante y te hace la pregunta,
     "puedo abrir la puerta ?".
 
--   Su lavadora está en el sótano, el programa ha finalizado.,
+-   Su lavadora está en el sótano, el programa ha finalizado,
     SARAH reproduce un sonido "ding, dong" y anuncia que el programa
     está terminado. Entonces ella te hace la pregunta, "debería apagar
     la lavadora ?".
 
 -   Ets…​
 
-El único límite será tu imaginación..
+El único límite será tu imaginación.

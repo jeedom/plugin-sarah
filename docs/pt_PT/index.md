@@ -15,7 +15,7 @@ Configuração do plugin
 -----------------------
 
 Depois que o plug-in SARAH foi instalado no Jeedom a partir do Market,
-clique em **Activer**.
+clique em **Ativar**.
 
 Configure o nome de Sarah (padrão **Sarah**, mas você pode
 coloque Jarvis ou Jeedom, por exemplo).
@@ -26,7 +26,7 @@ Em seguida, clique em um dos botões para baixar o plugin
 **Jeedom** para a versão do SARAH que você está usando, v3 ou v4.
 
 Após o download, pare o servidor e o cliente SARAH..
-Descompacte o arquivo na pasta **plugins** de Sarah no
+Descompacte o arquivo na pasta **Plugins** de Sarah no
 estação de trabalho cliente (somente compatível com Windows) :
 <http://encausse.wordpress.com/s-a-r-a-h/>
 
@@ -37,7 +37,7 @@ Configuração do equipamento
 -----------------------------
 
 A configuração do equipamento SARAH é acessível a partir do
-Menu de Plugins :
+Menu de plugins :
 
 ![sarah2](../images/sarah2.PNG)
 
@@ -46,7 +46,7 @@ equipamento) :
 
 ![sarah3](../images/sarah3.PNG)
 
-> **Tip**
+> **Dica**
 >
 > Como em muitos lugares em Jeedom, coloque o mouse na extremidade esquerda
 > abre um menu de acesso rápido (você pode, em
@@ -64,7 +64,7 @@ Você encontra aqui :
 -   **Objeto pai** : indica o objeto pai ao qual
     pertence a equipamento.
 
--   **Activer** : torna seu equipamento ativo,
+-   **Ativar** : torna seu equipamento ativo,
 
 -   **Endereço NodeJS** : Porta do nó SARAH IP + JS (por
     a porta padrão é 8080)
@@ -77,14 +77,14 @@ Você encontra aqui :
 
 Cada equipamento do tipo SARAH também cria um pedido :
 
--   **Dit** : O que permite que, nos cenários, digamos um texto
+-   **Disse** : O que permite que, nos cenários, digamos um texto
     na Jeedom. É possível anunciar uma frase aleatoriamente
     separando suas frases com um cano : | Exemplo : A porta da frente
     está aberto.|Uma pessoa abriu a porta da frente.|Porta de entrada
     aberto. Então, durante o anúncio, uma de suas três frases será escolhida
     aleatoriamente.
 
--   **Jouer** : O que permite executar um arquivo de áudio do tipo .mp3
+-   **Reproduzir** : O que permite executar um arquivo de áudio do tipo .mp3
     ou .wav. Esses arquivos de áudio devem ser colocados para o **v3** :
     na pasta **"medias"** na raiz ou **v4** : na pasta
     **"cliente / mídia"** do seu aplicativo SARAH No seu
@@ -109,16 +109,16 @@ Aqui está um exemplo simples de uso :
 
 ![sarah6](../images/sarah6.PNG)
 
-Quando você adiciona o comando Ação "**Aplicar**", vous
+Quando você adiciona o comando action "**Aplicar**", vous
 verá 5 campos parecem estar preenchidos :
 
--   **Question** : A pergunta que você deseja que o Jeedom faça.
+-   **Pergunta** : A pergunta que você deseja que o Jeedom faça.
 
--   **Réponse ** : As opções de resposta que você deseja poder
+-   **Réponse** : As opções de resposta que você deseja poder
     interagir seguindo a pergunta. Cada resposta deve ser separada por
     um ponto e vírgula.
 
--   **Variable** : Este será o nome da variável na qual você
+-   **Variável** : Este será o nome da variável na qual você
     gostaria que sua resposta fosse gravada, para que você possa
     uma avaliação para o restante do cenário.
 
@@ -126,7 +126,7 @@ verá 5 campos parecem estar preenchidos :
     continue a concluir a avaliação, se nenhuma resposta for recebida
     determinado (Tempo limite).
 
--   **Commandes** : Será ordem "**Dit**" do seu
+-   **Comandos** : Será ordem "**Disse**" do seu
     Equipamento SARAH.
 
 Configuração no SARAH. 
@@ -149,7 +149,7 @@ plugin.
 
 Dans **addrJeedom**, substituir **\ [IP\_JEEDOM \]** pelo seu IP
 Jeedom e substituir **\ [PORT\_JEEDOM \]**, vestindo seu Jeedom.
-Se o seu Jeedom usa a extensão **/jeedom**, não esqueça de
+Se o seu Jeedom usa a extensão **/ jeedom**, não esqueça de
 indique depois de usar.
 
 Dans **apikeyJeedom**, substituir **\ [CLE\_API\_JEEDOM \]** pela chave
