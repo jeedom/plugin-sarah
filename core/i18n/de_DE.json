@@ -1,24 +1,48 @@
 {
-    "plugins/sarah/plugin_info/configuration.php": {
-        "Nom S.A.R.A.H": "S.A.R.A.H Name"
+    "plugins\/sarah\/plugin_info\/configuration.php": {
+        "Nom S.A.R.A.H": "Nennen Sie SARAH",
+        "Télécharger le plugin": "Laden Sie das Plugin herunter",
+        "Télécharger pour installer dans S.A.R.A.H v3": "Download zur Installation in SARAH v3",
+        "Télécharger pour installer dans S.A.R.A.H v4": "Download zur Installation in SARAH v4"
     },
-    "plugins/sarah/desktop/php/sarah.php": {
-        "Ajouter une S.A.R.A.H": "S.A.R.A.H hinzufügen",
+    "plugins\/sarah\/desktop\/php\/sarah.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Ajouter une S.A.R.A.H": "Fügen Sie eine SARAH hinzu",
         "Rechercher": "Suchen nach",
-        "Mes S.A.R.A.H": "Mein S.A.R.A.H",
-        "Générale": "Allgemeine",
-        "Nom de l'équipement S.A.R.A.H": "S.A.R.A.H Gerätename",
-        "Objet parent": "Eltern-Objekt",
+        "Mes S.A.R.A.H": "Meine SARAH",
+        "Générale": "Allgemein",
+        "Nom de l'équipement S.A.R.A.H": "Name der SARAH-Ausrüstung",
+        "Objet parent": "Übergeordnetes Objekt",
         "Aucun": "Ohne",
         "Activer": "Aktivieren",
-        "Adresse du nodeJS": "nodeJS Adresse",
-        "Adresse du TTS": "TTS Adresse",
-        "Ne pas remonter d'erreur si S.A.R.A.H n'est pas la": "Keine Fehler übergeben wenn S.A.R.A.H nicht verfügbar ist.",
-        "Synchroniser": "Synchronisieren",
+        "Visible": "Sichtbar",
+        "Adresse du nodeJS": "NodeJS-Adresse",
+        "Adresse du TTS": "TTS-Adresse",
+        "Remonter une erreur si S.A.R.A.H n'est pas la": "Melden Sie einen Fehler, wenn SARAH nicht vorhanden ist",
+        "Oui": "Ja",
+        "Non": "Nicht",
+        "Commandes": "Befehle",
+        "Nom": "Name",
+        "Type": "Typ",
+        "Action": "Aktion",
+        "Synchroniser": "Synchronize",
         "Supprimer": "Löschen",
         "Sauvegarder": "Speichern"
     },
-    "plugins/sarah/desktop/js/sarah.js": {
-        "Demande de synchronisation reussie": "Erfolgreiche Synchronisierungsanforderung"
+    "plugins\/sarah\/desktop\/js\/sarah.js": {
+        "Historiser": "Chronik",
+        "Afficher": "Anzeige",
+        "Tester": "Test",
+        "Demande de synchronisation reussie": "Synchronisationsanforderung erfolgreich"
+    },
+    "plugins\/sarah\/core\/ajax\/sarah.ajax.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Aucune methode correspondante à : ": "Keine Methode entsprechend:"
+    },
+    "plugins\/sarah\/core\/api\/sarah.api.php": {
+        "JSONRPC object not defined": "JSONRPC-Objekt nicht definiert",
+        "Aucune correspondance pour l\\'id sarah : ": "Keine Übereinstimmung mit Sarah ID:",
+        "Commande speak de sarah non trouvée": "Sarah spricht Befehl nicht gefunden",
+        "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()": "Keine entsprechende Methode für das SARAH-Plugin: '. $ jsonrpc-> getMethod ()"
     }
 }
