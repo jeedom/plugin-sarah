@@ -44,5 +44,8 @@
         "Aucune correspondance pour l\\'id sarah : ": "No match for sarah id:",
         "Commande speak de sarah non trouvée": "Sarah speak command not found",
         "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()": "No corresponding method for the SARAH plugin: '. $ jsonrpc-> getMethod ()"
+    },
+    "info.json": {
+        "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)": "Plugin to use Sarah (http:\/\/encausse.wordpress.com\/sarah\/)"
     }
 }
