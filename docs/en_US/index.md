@@ -17,7 +17,7 @@ Configure Sarah's name (default **Sarah**, but you can put Jarvis or Jeedom for 
 Then click on one of the buttons to download the plugin **Jeedom** for the version of SARAH you are using, v3 or v4.
 
 Once downloaded, stop the SARAH Server and Client Unzip the archive in the folder **Plugins** SARAH on the client workstation (Windows compatible only) :
-<http://encausse.wordpress.com/s-a-r-a-h/>
+<https://blog.encausse.net/sarah/>
 
 When done, you can restart the SARAH client and server..
 

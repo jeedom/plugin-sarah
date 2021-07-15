@@ -6,7 +6,12 @@
         "en_US": "Plugin to use Sarah (http:\/\/encausse.wordpress.com\/sarah\/)",
         "es_ES": "Complemento para usar Sarah (http:\/\/encausse.wordpress.com\/sarah\/)",
         "de_DE": "Plugin zur Verwendung von Sarah (http:\/\/encausse.wordpress.com\/sarah\/)",
-        "pt_PT": "Plug-in para usar Sarah (http:\/\/encausse.wordpress.com\/sarah\/)"
+        "pt_PT": "Plug-in para usar Sarah (http:\/\/encausse.wordpress.com\/sarah\/)",
+        "ru_RU": "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)",
+        "id_ID": "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)",
+        "it_IT": "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)",
+        "ja_JP": "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)",
+        "tr": "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)"
     },
     "licence": "AGPL",
     "author": "Loïc",
@@ -19,7 +24,12 @@
         "en_US",
         "es_ES",
         "de_DE",
-        "pt_PT"
+        "ru_RU",
+        "id_ID",
+        "it_IT",
+        "ja_JP",
+        "pt_PT",
+        "tr"
     ],
     "compatibility": [
         "miniplus",

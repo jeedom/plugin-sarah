@@ -17,7 +17,7 @@ Konfigurieren Sie Sarahs Namen (Standard **Sarah**, Aber Sie können zum Beispie
 Klicken Sie dann auf eine der Schaltflächen, um das Plugin herunterzuladen **Jeedom** Für die Version von SARAH, die Sie verwenden, v3 oder v4.
 
 Stoppen Sie nach dem Herunterladen den SARAH-Server und den Client. Entpacken Sie das Archiv im Ordner **Plugins** SARAH auf der Client-Workstation (nur Windows-kompatibel) :
-<http://encausse.wordpress.com/s-a-r-a-h/>
+<https://blog.encausse.net/sarah/>
 
 Wenn Sie fertig sind, können Sie den SARAH-Client und -Server neu starten..
 

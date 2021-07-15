@@ -1,24 +1,24 @@
 {
     "plugins\/sarah\/plugin_info\/configuration.php": {
-        "Nom S.A.R.A.H": "",
-        "Télécharger le plugin": "",
-        "Télécharger pour installer dans S.A.R.A.H v3": "",
-        "Télécharger pour installer dans S.A.R.A.H v4": ""
+        "Nom S.A.R.A.H": "Nom S.A.R.A.H",
+        "Télécharger le plugin": "Télécharger le plugin",
+        "Télécharger pour installer dans S.A.R.A.H v3": "Télécharger pour installer dans S.A.R.A.H v3",
+        "Télécharger pour installer dans S.A.R.A.H v4": "Télécharger pour installer dans S.A.R.A.H v4"
     },
     "plugins\/sarah\/desktop\/php\/sarah.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
-        "Ajouter une S.A.R.A.H": "",
+        "Ajouter une S.A.R.A.H": "Ajouter une S.A.R.A.H",
         "Rechercher": "検索",
-        "Mes S.A.R.A.H": "",
+        "Mes S.A.R.A.H": "Mes S.A.R.A.H",
         "Générale": "一般的な",
-        "Nom de l'équipement S.A.R.A.H": "",
+        "Nom de l'équipement S.A.R.A.H": "Nom de l'équipement S.A.R.A.H",
         "Objet parent": "親オブジェクト",
         "Aucun": "何でもありません",
         "Activer": "アクティブ",
         "Visible": "目に見えます",
-        "Adresse du nodeJS": "",
-        "Adresse du TTS": "",
-        "Remonter une erreur si S.A.R.A.H n'est pas la": "",
+        "Adresse du nodeJS": "Adresse du nodeJS",
+        "Adresse du TTS": "Adresse du TTS",
+        "Remonter une erreur si S.A.R.A.H n'est pas la": "Remonter une erreur si S.A.R.A.H n'est pas la",
         "Oui": "はい",
         "Non": "ではありません",
         "Commandes": "コマンド",
@@ -33,19 +33,19 @@
         "Historiser": "Historicize",
         "Afficher": "ディスプレイ",
         "Tester": "テスト",
-        "Demande de synchronisation reussie": ""
+        "Demande de synchronisation reussie": "Demande de synchronisation reussie"
     },
     "plugins\/sarah\/core\/ajax\/sarah.ajax.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
         "Aucune methode correspondante à : ": "以下に対応するメソッドはありません："
     },
     "plugins\/sarah\/core\/api\/sarah.api.php": {
-        "JSONRPC object not defined": "",
-        "Aucune correspondance pour l\\'id sarah : ": "",
-        "Commande speak de sarah non trouvée": "",
-        "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()": ""
+        "JSONRPC object not defined": "JSONRPC object not defined",
+        "Aucune correspondance pour l\\'id sarah : ": "Aucune correspondance pour l\\'id sarah :",
+        "Commande speak de sarah non trouvée": "Commande speak de sarah non trouvée",
+        "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()": "Aucune methode correspondante pour le plugin S.A.R.A.H : ' . $jsonrpc->getMethod()"
     },
     "info.json": {
-        "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)": ""
+        "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)": "Plugin pour utiliser Sarah (http:\/\/encausse.wordpress.com\/s-a-r-a-h\/)"
     }
 }

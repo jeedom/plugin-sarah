@@ -17,7 +17,7 @@ Configurar el nombre de Sarah (predeterminado **Sarah**, pero puedes poner Jarvi
 Luego haga clic en uno de los botones para descargar el complemento **Jeedom** para la versión de SARAH que está utilizando, v3 o v4.
 
 Una vez descargado, detenga el servidor SARAH y el cliente Descomprima el archivo en la carpeta **plugins** SARAH en la estación de trabajo del cliente (solo compatible con Windows) :
-<http://encausse.wordpress.com/s-a-r-a-h/>
+<https://blog.encausse.net/sarah/>
 
 Cuando termine, puede reiniciar el cliente y el servidor SARAH..
 
